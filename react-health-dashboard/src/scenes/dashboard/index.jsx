@@ -22,7 +22,6 @@ const Dashboard = () => {
       {/* HEADER */}
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
-
         <Box>
           <Button
             sx={{
@@ -38,7 +37,6 @@ const Dashboard = () => {
           </Button>
         </Box>
       </Box>
-
       {/* GRID & CHARTS */}
       <Box
         display="grid"
@@ -92,6 +90,7 @@ const Dashboard = () => {
           alignItems="center"
           justifyContent="center"
         >
+          {" "}
           <StatBox
             title="32,441"
             subtitle="New Clients"
@@ -123,7 +122,6 @@ const Dashboard = () => {
             }
           />
         </Box>
-
         {/* ROW 2 */}
         <Box
           gridColumn="span 8"
@@ -215,7 +213,6 @@ const Dashboard = () => {
             </Box>
           ))}
         </Box>
-
         {/* ROW 3 */}
         <Box
           gridColumn="span 4"

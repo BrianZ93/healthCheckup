@@ -2,8 +2,11 @@ version: "3"
 services:
   frontend:
     image: frontend
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
     volumes:
-      - ./frontend:/react-health-dashboard
+      - "./react-health-dashboard:/react-health-dashboard"
+      - "/react-health-dashboard/node_modules"
     ports:
       - 3000:3000
     command: npm start

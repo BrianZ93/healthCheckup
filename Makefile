@@ -7,6 +7,7 @@ run-local:
 	docker-compose -f docker-compose.yml build
 	docker-compose -f docker-compose.yml up
 
+
 clean:
 	docker login
 	docker-compose down --remove-orphans
