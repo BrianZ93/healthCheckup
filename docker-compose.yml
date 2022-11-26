@@ -1,0 +1,16 @@
+version: "3"
+services:
+  frontend:
+    image: frontend
+    volumes:
+      - ./frontend:/react-health-dashboard
+    ports:
+      - 3000:3000
+    command: npm start
+  # backend:
+  #   image: backend
+  #   volumes:
+  #     - ./backend:/backend
+  #   ports:
+  #     - 3001:3001
+  #   command: javac "insert future filenames here"
