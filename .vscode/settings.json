@@ -1,5 +1,6 @@
 {
   "java.project.sourcePaths": [
     "backendapi/src/main/java/com/backendapi/backendapi"
-  ]
+  ],
+  "java.configuration.updateBuildConfiguration": "interactive"
 }

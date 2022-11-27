@@ -3,7 +3,7 @@ default: build
 run-local:
 	docker login
 	docker build --target="frontend" --tag frontend .
-	# docker build --target="backend" --tag backend .
+	docker build --target="backend" --tag backend .
 	docker-compose -f docker-compose.yml build
 	docker-compose -f docker-compose.yml up
 
@@ -24,3 +24,4 @@ stop-appArmor:
 restart-appArmor:
 	sudo systemctl start apparmor
 	sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/*
+

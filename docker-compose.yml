@@ -10,10 +10,11 @@ services:
     ports:
       - 3000:3000
     command: npm start
-  # backend:
-  #   image: backend
-  #   volumes:
-  #     - ./backend:/backend
-  #   ports:
-  #     - 3001:3001
-  #   command: javac "insert future filenames here"
+  backend:
+    image: backend
+    volumes:
+      - ./backendapi:/backend
+    ports:
+      - 3001:3001
+    command: java -jar target/backendapi-0.0.1-SNAPSHOT.jar
+    # command: mvn spring-boot:run

@@ -1,3 +1,4 @@
+# Frontend Container Setup
 FROM node:16.14-alpine as frontend
 
 WORKDIR /react-health-dashboard
@@ -14,5 +15,10 @@ COPY ./react-health-dashboard ./
 ENV PORT=3000
 EXPOSE 3000
 
+# Backend Container Setup
+# TODO - Get active reload to work with spring boot in a docker container and get it to host on 3001 instead of 8080
 
-
+FROM openjdk:19-jdk-alpine as backend
+ARG JAR_FILE=backendapi/target/*.jar
+COPY ${JAR_FILE} target/backendapi-0.0.1-SNAPSHOT.jar
+EXPOSE 3001
