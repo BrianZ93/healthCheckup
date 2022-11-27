@@ -13,3 +13,14 @@ clean:
 	docker-compose down --remove-orphans
 	docker image prune -a
 	docker network prune
+	docker system prune --all --volumes
+
+stop-appArmor:
+	sudo aa-status
+	sudo systemctl disable apparmor.service --now 
+	sudo service apparmor teardown
+	sudo aa-status
+
+restart-appArmor:
+	sudo systemctl start apparmor
+	sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/*
