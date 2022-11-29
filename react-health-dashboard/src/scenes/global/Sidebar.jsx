@@ -107,10 +107,10 @@ const Sidebar = () => {
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
-                  Ed Roh
+                  Brian & Jennifer
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                  VP Fancy Admin
+                  Gluttonous Recluses
                 </Typography>
               </Box>
             </Box>
@@ -140,8 +140,8 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="Contacts Information"
-              to="/contacts"
+              title="Manage Ingredients"
+              to="/ingredients"
               icon={<ContactsOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}

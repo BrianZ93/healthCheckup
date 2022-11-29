@@ -1,0 +1,14 @@
+[
+  {
+    "name": "flour",
+    "gluten": "Yes",
+    "vegan": "No",
+    "dairy": "No"
+  },
+  {
+    "name": "corn",
+    "gluten": "No",
+    "vegan": "No",
+    "dairy": "No"
+  }
+]
